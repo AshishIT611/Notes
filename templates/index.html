@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    {% with messages=get_flashed_messages() %}
+    {% if messages %}
+    <script>alert("{{messages[0]}}");</script>
+    {% endif %}
+    {% endwith %}
+    <h1>📒 Notes App</h1>
+    <a href="{{url_for('write')}}" class="btn">✍🏻 Write</a>
+    <a href="{{url_for('read')}}" class="btn">📖 Read</a>
+    <div class="card">
+        <p>Write and read your notes easily.</p>
+    </div>
+</body>
+</html>

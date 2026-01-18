@@ -1,0 +1,178 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards Container */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Individual Card */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.card p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    word-wrap: break-word;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card p strong {
+    color: #667eea;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 80px;
+}
+
+/* No Data Message */
+body > p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 40px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 0 auto;
+    display: block;
+    max-width: 300px;
+}
+
+/* Back Link */
+a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-4px);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    body {
+        padding: 20px 10px;
+    }
+}
+/* Action Buttons Container */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+/* Common Button Styles */
+.actions a {
+    flex: 1;
+    text-align: center;
+    margin: 0 6px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: rgba(102, 126, 234, 0.15);
+    color: #667eea;
+}
+
+.edit-btn:hover {
+    background: rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background: rgba(231, 76, 60, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actions a {
+        margin: 0;
+        width: 100%;
+    }
+}
